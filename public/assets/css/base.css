@@ -1,0 +1,246 @@
+/* GLOABL CSS */
+
+
+@font-face {
+font-family: 'OpenSansLight';
+src: url('../fonts/OpenSans-Light-webfont.eot');
+src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+} 
+
+@font-face {
+font-family: 'OpenSans-Regular';
+src: url('../fonts/OpenSans-Regular-webfont.eot');
+src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+url('../fonts/OpenSans-Regular-webfont.svg#OpenSans-Regular') format('svg');
+} 
+@font-face {
+font-family: 'OpenSans-Bold';
+src: url('../fonts/OpenSans-Bold-webfont.eot');
+src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+url('../fonts/OpenSans-Bold-webfont.svg#OpenSans-Bold') format('svg');
+} 
+
+.bl-bg{
+
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+html{
+	background-color: #F7F7F4;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	-webkit-font-smoothing: antialiased;
+}
+body{
+	background-position: top right;
+	background-repeat: no-repeat;
+	}
+
+.container{	
+	background-repeat: no-repeat;
+	font-weight: normal;
+	padding: 10px;
+}	
+.graphicarrow{
+	margin-top: 9px;
+	margin-left: 48%;
+}
+	.arrow-up {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #e2e0de;
+	}
+	.arrow-up-a {
+		margin-top: 1px;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #fff;
+	}
+	.arrow-up-b {
+		margin-top: 2px;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #F7F7F4;
+	}
+hr{
+	border:0; 
+	padding:0px; 
+	margin: 15px 0 5px 0; 
+	background:#E1E1E2; 
+	border-bottom:1px solid #ecebe9; 
+	height: 1px;
+	width:100%; 
+	float:left; 
+	clear:left;
+}
+.headline-top{
+	width:100%;
+	border-bottom:1px solid #ecebe9; 
+	padding:2px 0 5px 0;
+	overflow:hidden;
+	-webkit-box-shadow: 0 1px 0 0 #dadadb;
+	box-shadow: 0 1px 0 0 #dadadb;
+}
+.headline-top .match-status{
+	width:50%;
+	float:left;
+	text-align:left;
+	padding:0 0 0 5px;
+	font-family:"OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-size:11pt;
+	color:#686A6D;
+}
+.headline-top .date-time{
+	width:40%;
+	float:right;
+	text-align:right;
+	padding:0 2px 0 0;
+	overflow:hidden;
+	font-family:"OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-size:11pt;
+	color:#686A6D;
+}
+.result{
+	width:99%;
+	border-bottom:1px solid #ecebe9; 
+	padding:2px 0 5px 0;
+	overflow:hidden;
+	font-family:"OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-size:15pt;
+	color:#ee3a48;
+	padding:5px 3px 5px 10px;
+	margin-bottom: 15px;
+}
+.score-box{
+	width:100%;
+	height:80px;
+}
+.main-commentary-box{
+	width:100%;
+	overflow:hidden;
+	padding:5px 0 5px 0;
+	margin:5px 0 -16px 0;
+}
+.grey-box{
+	width:100%;
+	background-color:#f0efee;
+	height:32px;
+	overflow:hidden;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomright:5px;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-bottom-right-radius:5px;
+	-webkit-box-shadow: 0px 1px 0px 0px #fff;
+	 box-shadow: 0px 1px 0px 0px #fff;
+	 margin:8px 0 8px 0;	
+}
+.grey-box .over{
+	width:45%;
+	float:left;
+	padding:8px 0 5px 5px;
+	font-family:"OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-size:12pt;
+	color:#686A6D;
+}
+.grey-box .countery-name{
+	width:45%;
+	float:right;
+	padding:5px 10px 5px 0px;
+	font:13pt 'OpenSans-Bold', Arial, Helvetica, Geneva, sans-serif;
+	color:#686A6D;
+	text-align:right;
+}
+.player-score{
+	width:99%;
+	font-family:"OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-size:12pt;
+	color:#686A6D;
+	margin:5px 0 0 0;
+	padding:6px 5px 10px 6px;
+	border-bottom:1px solid #ecebe9;
+}
+.innings{
+	width:100%;
+	height:10px;
+	padding:0 0 0 0;
+	position:relative;
+	top:-4px;
+	left:45%;
+	background:url(../images/innings-separator.jpg) no-repeat;
+}
+.bold-font{
+	font:12pt 'OpenSans-Bold', Arial, Helvetica, Geneva, sans-serif;
+	color:#686A6D;
+}
+.heighlight-font{
+	font:12pt 'OpenSans-Regular', Arial, Helvetica, Geneva, sans-serif;
+	color:#DD8473;
+}
+.score-box{
+    width:100%;
+    height:30px;
+}
+.team-score{
+    width:25%;
+    overflow:hidden;
+    float:left;
+    font:16pt 'OpenSans-Bold', Arial, Helvetica, Geneva, sans-serif;
+    color:#ef4958;
+    text-align:center;
+    margin:0 2px 0 2px;
+}
+.team-over{
+    width:20%;
+    overflow:hidden;
+    float:left;
+    font:10pt 'OpenSans-Regular', Arial, Helvetica, Geneva, sans-serif;
+    color:#686A6D;
+    text-align:center;
+    padding:6px 0 0 0;
+}
+.run-rate{
+    width:20%;
+    overflow:hidden;
+    float:left;
+    font:10pt 'OpenSans-Regular', Arial, Helvetica, Geneva, sans-serif;
+    color:#686A6D;
+    text-align:center;
+    padding:6px 0 0 0;
+}
+.team-names{
+       width:32%;
+       overflow:hidden;
+       float:left;
+       margin-left:4px;
+       font:14pt 'OpenSans-Bold', Arial, Helvetica, Geneva, sans-serif;
+       color:#686A6D;
+}
+#wrapper{
+	position:relative;
+	overflow:hidden;
+	width: auto;
+}

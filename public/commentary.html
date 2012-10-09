@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Commentary</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/standings.css" />
+    <script type="text/javascript" src="assets/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascripts/process_data.js"></script>
+    <script type="text/javascript" src="assets/javascripts/tmpl.js"></script>
+    <script type="text/javascript" src="assets/javascripts/iscroll.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery.nicescroll.js"></script>
+
+</head>
+<body>
+
+<div class="bl-bg"> 
+	<div class="container">
+		<div id="match_stats"></div>
+	    <div id="wrapper" class="match-events">
+		    <div id="result"></div>    
+		</div>
+	</div>
+</div>	
+
+</body>
+</html>
+
+<script type="text/x-tmpl" id="scores-template">
+	<div class="headline-top">
+		<div class="match-status">{%= o.match_status%} {%= o.match_type%}</div>
+	    <div class="date-time">{%= o.match_date_place%}</div>
+	</div>
+	<div class="result">
+	<p>{%= o.summary%}</p>
+	</div>
+	<div id="scores">
+		<div class="score-box">
+		    <div class="team-names">{%= o.batting_team_name%}</div>
+		    <div class="team-score">{%= o.batting_team_score%}</div>
+		    <div class="team-over">{%= o.batting_team_overs%}</div>
+		    <div class="run-rate">{%= o.batting_team_runrate%}</div>
+		</div>
+		<div class="clear"></div>
+		{% if(o.current_inning == 2) { %}
+		<div class="score-box">
+		    <div class="team-names">{%= o.bowling_team_name%}</div>
+		    <div class="team-score">{%= o.bowling_team_score%}</div>
+		    <div class="team-over">{%= o.bowling_team_overs%}</div>
+		    <div class="run-rate">{%= o.bowling_team_runrate%}</div>
+		</div>
+		{% } %}
+	</div>
+	<div class="clear"></div>
+	<hr class='indent' />
+	<div class="graphicarrow">
+		<div class="arrow-up"></div>
+	    <div class="arrow-up-a"></div>
+	    <div class="arrow-up-b"></div>
+	</div>
+	<div class="clear"></div>
+	    
+	
+</script>
+
+
+<script type="text/x-tmpl" id="commentary-template">
+	{% for (var i=o.items.length-1; i>=o.current_event_count; i--) { %}
+	<div class="main-commentary-box">
+	    {% if(o.items[i].is_end_of_over == true) { %}
+	    <div class="grey-box">
+	        <div class="over">Over {%= o.items[i].current_over %}</div>
+	        <div class="countery-name">{%= o.items[i].current_team %} {%= o.items[i].current_score %}/{%= o.items[i].current_wickets %}</div>
+	    </div>
+	    {% } else { %}
+	    <div class="player-score">{%= o.items[i].long_message %}<span class="bold-font">{%= o.items[i].bold_message %}</span>  
+	    {% 
+		    if(o.items[i].event_type == "cricket_wicket_event") { %}
+		    <p class="heighlight-font">{%= o.items[i].how_out %}</p>
+		    {% } 	
+	    	
+	    }%}
+	    </div>
+	    {% if(o.items[i].is_end_of_innings == true) { %}
+	    <div class="innings"></div>
+	    {% } %}
+	</div>
+	{% } %}
+</script>
+
+
+
+<script type="text/javascript" >
+
+
+$(document).ready(function() {
+  	var contest_id = getQuerystring("contest_id",0);
+
+  	sendAjaxScores(contest_id);
+	
+	sendAjaxEvents(contest_id);
+
+	
+});
+</script>

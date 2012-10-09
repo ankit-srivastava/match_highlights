@@ -1,0 +1,424 @@
+// here are custom styles //\
+
+/* FONTS */
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('/assets/fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/bebasneue-webfont.woff') format('woff'),
+         url('/assets/fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('/assets/fonts/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('/assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/opensans-light-webfont.woff') format('woff'),
+         url('/assets/fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/opensans-light-webfont.svg#OpenSansLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+	background-color : #F7F7F4;
+}
+
+#slider {
+	ul {
+		margin: 0;
+		padding: 0;
+		/*-webkit-transition: -webkit-transform 0.3s linear;*/
+		width: 1000%;
+		overflow: hidden;
+
+		li {
+			float : left;
+			box-sizing : border-box;
+			/*padding : 10px;*/
+		}
+	}
+
+
+}
+
+.standings {
+	/*height : 150px;*/
+	overflow-y : scroll;
+	position: relative;
+}
+
+.standing-parent {
+	overflow: hidden;
+}
+
+.inning {
+	.ui-block-a {
+		width : 70%;
+		color: #FF4653;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font: 20px "BebasNeue", Arial, Helvetica, Geneva, sans-serif;
+		padding: 6px 0px 0px 10px;
+	}
+
+	.ui-block-b {
+		width : 30%;
+		text-align : right;
+	}
+}
+
+
+#position {
+
+	em {
+		display: inline-block;
+		padding: 0 3px;
+		font-style: normal;
+		font-family: sans-serif;
+	}
+
+	.on {
+		color: #9D9EA0;
+	}
+}
+
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.flip-button {
+	width: 82px;
+	height: 35px;
+}
+
+.page {
+
+	font-family: "BebasNeue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: normal;
+
+	.rule {
+		border: 0;
+		padding: 0px;
+		margin: 0px;
+		background: #E1E1E2;
+		border-bottom: 1px solid white;
+		height: 1px;
+		width: 100%;
+		float: left;
+		clear: left;
+	}
+
+	.summary {
+		color : #FF4653;
+		font : 11pt 'OpenSans-Light';
+		line-height: 22px;
+		padding-left : 10px;
+		height : 24px;
+		overflow: hidden;
+	}
+
+	.stats {
+		color : #686a6d;
+		font : 10pt 'OpenSans-Light';
+		line-height : 22px;
+		padding-left : 10px;
+
+		.ui-block-b {
+			text-align: right;
+			padding-right: 10px;
+		}
+		/*height : 22px;
+		overflow: hidden;*/
+	}
+}
+
+.teams {
+	margin: 5px 10px;
+}
+
+.team-grid {
+
+	text-align : center;
+	color : #696B6E;
+	font : 20px "BebasNeue", Arial, Helvetica, Geneva, sans-serif;
+
+	.ui-block-b, .ui-block-c {
+		margin-top : 2px;
+		div {
+			line-height: 20px;
+		}
+	}
+
+
+	button {
+		min-height: 44px;
+		font: 20px "BebasNeue", Arial, Helvetica, Geneva, sans-serif;
+		background: none;
+		border: none;
+		color: #FF4653;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: center;
+		width : 100%;
+		margin: 0px;
+		padding : 0px;
+	}
+}
+
+.team-table {
+	width : 100%;
+	font : 20px "BebasNeue", Arial, Helvetica, Geneva, sans-serif;
+
+	thead {
+		display: none;
+	}
+
+	.td-block-a {
+		color : #ff4653;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 120px;
+	}
+
+	.td-block-b {
+		text-align : center;
+	}
+
+	.td-block-c {
+		font : 10pt 'OpenSans-Light', Arial, Helvetica, Geneva, sans-serif;	
+		text-align : center;
+		position: relative;
+		top: -2px;
+	}
+
+	.td-block-d {
+		font : 10pt 'OpenSans-Light', Arial, Helvetica, Geneva, sans-serif;	
+		text-align : right;
+		/*padding-right : 5px;*/
+		position: relative;
+		top: -2px;
+	}
+}
+
+.team {
+
+
+	color : #686a6d;
+	/*font : 20px "BebasNeue", Arial, Helvetica, Geneva, sans-serif;	*/
+
+	.ui-block-a {
+		color : #ff4653;
+		width : 30%;
+		font-weight : bold;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.ui-block-b {
+		text-align : center;
+		width : 20%;
+		font-weight : bold;
+	}
+
+	.ui-block-c {
+		font : 12pt 'OpenSans-Light', Arial, Helvetica, Geneva, sans-serif;	
+		text-align : center;
+	}
+
+	.ui-block-d {
+		font : 12pt 'OpenSans-Light', Arial, Helvetica, Geneva, sans-serif;	
+		text-align : right;
+		padding-right : 5px;
+	}
+
+	.ui-grid-c {
+		width : 100%;
+	}
+}
+
+.footer {
+
+	font : 13px "OpenSans-Light", Arial, Helvetica, Geneva, sans-serif;
+	color: #696B6E;
+	padding : 0px 10px 10px 15px;
+
+	.last-batsman {
+		font-family : "BebasNeue";
+		font-size : 12pt;
+	}
+
+	.last-batsman-out {
+		color : #dd8473;
+	}
+
+	.btn-flip {
+		float : right;
+	}
+
+	.ui-block-a {
+		width : 70%;
+	}
+
+	.ui-block-b {
+		width : 30%;
+	}	
+}
+
+.extras {
+	font : 14px "OpenSans-Light", Arial, Helvetica, Geneva, sans-serif;
+	color: #696B6E;
+	margin-left : 10px;
+
+	span {
+		color : #dd8473;
+	}
+}
+
+#miniscorecard {
+	.header {
+		padding : 10px 10px 0px 10px;
+	}
+
+	.content {
+		margin: 10px;
+	}
+
+	.team-grid {
+		width: 100%;
+	}
+}
+
+#scorecard {
+	.header {
+
+		.main {
+			padding: 10px 10px 0px 10px;
+		}
+	}
+
+	.content {
+		width : 100%;
+		padding : 0px;
+		overflow: hidden;
+	}
+}
+
+
+#position {
+	text-align:center;
+	font-size:27px;
+	line-height:1;
+	color:#E0E1E1;
+	display:block;
+	left:50%;
+	margin-left:-75px;
+	width:150px;
+	position: relative;
+}
+
+.icon-crick {
+	/*position: relative;
+	top: 4px;
+	margin-left: 5px;*/
+	
+	position: relative;
+	top: 1px;
+	margin-left: 5px;
+	height: 13px;
+}
+
+.live-status {
+	float: left;
+	background: url("/assets/images/live_indicator.png") no-repeat;
+	background-size: 39px 22px;
+	font-size: 12px;
+	color: white;
+	padding: 0px 5px;
+	margin: 0px 10px 0px 0px;
+}
+
+.how-out {
+	margin-top : 3px;
+	color : #dd8473;
+}
+
+
+#scorecard {
+	.static-headers {
+
+		margin: 5px 0px 2px 0px;
+
+		.separator {
+			height : 5px;
+		}
+
+		thead:nth-child(1) {
+			display : table-header-group;
+		}
+
+		thead:nth-child(3) {
+			display : none;
+		}
+	}
+
+	.bat-standing {
+		thead {
+			display: none;
+		}
+	}
+
+	.standing thead tr th:nth-child(1){
+		width : 50%;
+	}
+}
+
+.current-inning-score {
+	color : #ff4653;
+}
+
+
+// tweak page flip speed
+.in {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 200ms;
+}
+
+.out {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 200ms;
+}
+
+// override jqm
+.ui-icon-loading {
+	background: url(/assets/images/ajax-loader.gif);
+}
+
+.refresh-loader {
+	float : right;
+	padding : 3px;
+	display: none;
+}
+
+.coming-soon{
+	display: none;
+	width:131px;
+	height:100px;
+	margin:auto;
+	background: url(/assets/images/Clock.png) no-repeat 45px  40px;
+	font:16pt "OpenSansLight", Arial, Helvetica, Geneva, sans-serif;
+	text-align:center;
+	color:#7f8183;
+	margin-top:5%;
+	margin-bottom:5%;
+}
